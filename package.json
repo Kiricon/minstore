@@ -1,0 +1,32 @@
+{
+  "name": "minstore",
+  "version": "1.0.0",
+  "description": "A minimal store for state creation and management",
+  "main": "main.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kiricon/minstore.git"
+  },
+  "keywords": [
+    "mini",
+    "minstore",
+    "store",
+    "state",
+    "micro",
+    "management",
+    "redux"
+  ],
+  "author": "Dominic Valenciana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kiricon/minstore/issues"
+  },
+  "homepage": "https://github.com/Kiricon/minstore#readme",
+  "devDependencies": {
+    "microbundle": "^0.2.4"
+  }
+}
