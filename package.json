@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "build": "microbundle",
-    "dev": "microbundle watch"
+    "dev": "microbundle watch",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -28,5 +29,9 @@
   "homepage": "https://github.com/Kiricon/minstore#readme",
   "devDependencies": {
     "microbundle": "^0.2.4"
+  },
+  "dependencies": {
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   }
 }
