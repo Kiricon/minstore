@@ -4,8 +4,6 @@
   "description": "A minimal store for state creation and management",
   "main": "main.js",
   "scripts": {
-    "build": "microbundle",
-    "dev": "microbundle watch",
     "start": "webpack-dev-server"
   },
   "repository": {
@@ -28,10 +26,8 @@
   },
   "homepage": "https://github.com/Kiricon/minstore#readme",
   "devDependencies": {
-    "microbundle": "^0.2.4"
-  },
-  "dependencies": {
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
-  }
+  },
+  "dependencies": {}
 }
