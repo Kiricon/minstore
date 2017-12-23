@@ -1,2 +1,42 @@
-function t(t){return new s(t)}var s=function(t){this.state=t,this._subscriptions=[]};s.prototype.getState=function(){return this.state},s.prototype.subscribe=function(t){this._subscriptions.push(t)},s.prototype.setState=function(t){var s={};for(var i in this.state)s[i]=this.state[i];for(var o in t)s[o]=t[o];this.state=s,this._callSubcriptions()},s.prototype._callSubcriptions=function(){for(var t=0;t<this._subscriptions.length;t++)this._subscriptions[t](this.state)},module.exports=t;
-//# sourceMappingURL=main.js.map
+class store {
+
+    constructor(state) {
+        this.state = state;
+        this._subscriptions = [];
+    }
+
+    getState() {
+        return this.state;
+    }
+
+    subscribe(fn) {
+        this._subscriptions.push(fn);
+    }
+
+    setState(newState) {
+        const oldState = this.state;
+
+        // Replace the two for loops with spread operator in the future
+        let tempState = {};
+        for(let prop in this.state) {
+            tempState[prop] = this.state[prop];
+        }
+
+        for(let prop in newState) {
+            tempState[prop] = newState[prop];
+        }
+
+        this.state = tempState;
+        this._callSubcriptions(oldState);
+    }
+
+    _callSubcriptions(oldState) {
+        for(let i = 0; i < this._subscriptions.length; i++) {
+            this._subscriptions[i](this.state, oldState);
+        }
+    }
+}
+
+export default function CreateStore(defaultState) {
+    return new store(defaultState);
+}
