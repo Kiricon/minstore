@@ -1,7 +1,7 @@
 class store {
 
     constructor(state) {
-        this.state = state;
+        this.state = state || {};
         this._subscriptions = [];
     }
 
