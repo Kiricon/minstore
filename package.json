@@ -1,6 +1,6 @@
 {
   "name": "minstore",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimal store for state creation and management",
   "main": "main.js",
   "scripts": {
